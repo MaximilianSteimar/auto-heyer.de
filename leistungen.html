@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leistungen – Autohaus Heyer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <a class="nav-logo" href="index.html"><img src="images/logo.jpg" alt="Autohaus Heyer Logo"></a>
+    <div class="nav-links">
+        <a href="index.html">Startseite</a>
+        <a href="leistungen.html" class="active">Leistungen</a>
+        <a href="tuev.html">TÜV</a>
+        <a href="team.html">Team</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="tel:0662392160" class="nav-cta">📞 Anrufen</a>
+    </div>
+    <button class="burger" onclick="toggleMenu()" aria-label="Menü">
+        <svg width="26" height="26" viewBox="0 0 50 50"><path d="M0 7.5h50v5H0zm0 15h50v5H0zm0 15h50v5H0z"/></svg>
+    </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Startseite</a>
+    <a href="leistungen.html">Leistungen</a>
+    <a href="tuev.html">TÜV</a>
+    <a href="team.html">Team</a>
+    <a href="galerie.html">Galerie</a>
+    <a href="tel:0662392160">📞 06623 92160</a>
+</div>
+
+<div class="page-header">
+    <h1>Unsere Leistungen</h1>
+    <p>Alles rund ums Fahrzeug – aus einer Hand</p>
+</div>
+
+<div style="max-width:860px; margin:0 auto; padding:0 20px;">
+
+    <div class="card">
+        <h2><span class="icon">🔧</span> Leistungsübersicht</h2>
+        <div class="leistungen-grid">
+            <div class="leistung-group">
+                <h3>🛠 Wartung &amp; Inspektion</h3>
+                <ul>
+                    <li>Inspektion nach Herstellervorgaben</li>
+                    <li>Haupt- &amp; Abgasuntersuchung (KÜS)</li>
+                    <li>Klimaservice mit Desinfektion</li>
+                    <li>Batterieservice</li>
+                    <li>Bremsenservice</li>
+                    <li>Reifenservice mit Einlagerung</li>
+                    <li>Saisonale Checks</li>
+                </ul>
+            </div>
+            <div class="leistung-group">
+                <h3>🚗 Reparatur &amp; Instandhaltung</h3>
+                <ul>
+                    <li>Glasservice (Scheibe reparieren/tauschen)</li>
+                    <li>Unfallschadenreparatur &amp; Gutachten</li>
+                    <li>Fehleranalyse</li>
+                    <li>Zahnriemenwechsel</li>
+                    <li>Fahrzeugaufbereitung</li>
+                    <li>Fahrzeuglackierung</li>
+                    <li>Sonstige Reparaturen</li>
+                </ul>
+            </div>
+            <div class="leistung-group">
+                <h3>🎯 Fahrzeugspezifisch</h3>
+                <ul>
+                    <li>Fahrzeug vermessen &amp; einstellen</li>
+                    <li>Feinstaubplakette</li>
+                </ul>
+            </div>
+            <div class="leistung-group">
+                <h3>🚚 Mobilität &amp; Service</h3>
+                <ul>
+                    <li>Abschleppdienst</li>
+                    <li>Vermietung von Dachboxen</li>
+                    <li>Vermietung von Fahrradträgern</li>
+                    <li>GLS-Paketshop</li>
+                    <li>Hermes-Paketshop</li>
+                    <li>DPD-Paketshop</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="border-left: 4px solid var(--red);">
+        <h2><span class="icon">💬</span> Ihr Anliegen fehlt?</h2>
+        <p>
+            Kein Problem! Rufen Sie uns einfach an oder schreiben Sie eine Mail. Wir versuchen, jedes Problem rund um Ihr Fahrzeug zu lösen.
+            <br><br>
+            <a href="tel:0662392160" class="btn">📞 Jetzt anrufen</a>
+            <a href="mailto:info@auto-heyer.de" class="btn" style="margin-left:10px; background:#333;">✉️ E-Mail schreiben</a>
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    <div class="footer-inner">
+        <div>
+            <h3>Kontakt</h3>
+            <div class="contact-item"><span class="contact-icon">📞</span><a href="tel:0662392160">06623 92160</a></div>
+            <div class="contact-item"><span class="contact-icon">✉️</span><a href="mailto:info@auto-heyer.de">info@auto-heyer.de</a></div>
+        </div>
+        <div>
+            <h3>Adresse</h3>
+            <p>Autohaus Heyer GmbH<br>Dickenrücker Str. 5<br>36199 Rotenburg a. d. Fulda</p>
+        </div>
+    </div>
+    <div class="footer-bottom">© 2025 Autohaus Heyer GmbH · <a href="impressum.html" style="color:rgba(255,255,255,0.5); text-decoration:none;">Impressum</a> · <a href="datenschutz.html" style="color:rgba(255,255,255,0.5); text-decoration:none;">Datenschutz</a></div>
+</footer>
+
+<script>
+function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('nav') && !e.target.closest('.mobile-menu'))
+        document.getElementById('mobileMenu').classList.remove('open');
+});
+</script>
+</body>
+</html>
